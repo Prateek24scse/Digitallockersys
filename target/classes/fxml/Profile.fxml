@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digitallocker.controllers.ProfileController" styleClass="main-container">
+    <children>
+        <VBox alignment="CENTER" spacing="20.0" styleClass="login-container" maxWidth="400">
+            <children>
+                <Label styleClass="title" text="Profile Settings" />
+                
+                <VBox spacing="15.0" styleClass="form-container">
+                    <children>
+                        <VBox spacing="10.0" styleClass="info-container">
+                            <children>
+                                <Label fx:id="usernameLabel" styleClass="info-label" text="Username: " />
+                                <Label fx:id="emailLabel" styleClass="info-label" text="Email: " />
+                                <Label fx:id="createdAtLabel" styleClass="info-label" text="Member Since: " />
+                            </children>
+                        </VBox>
+                        
+                        <Separator />
+                        
+                        <Label styleClass="section-title" text="Change Password" />
+                        
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Current Password" styleClass="field-label" />
+                                <PasswordField fx:id="currentPasswordField" promptText="Enter current password" styleClass="form-field" />
+                            </children>
+                        </VBox>
+                        
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="New Password" styleClass="field-label" />
+                                <PasswordField fx:id="newPasswordField" promptText="Enter new password" styleClass="form-field" />
+                            </children>
+                        </VBox>
+                        
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Confirm New Password" styleClass="field-label" />
+                                <PasswordField fx:id="confirmPasswordField" promptText="Confirm new password" styleClass="form-field" />
+                            </children>
+                        </VBox>
+                        
+                        <Label fx:id="statusLabel" styleClass="error-label" text="Status message" />
+                        
+                        <HBox spacing="10.0">
+                            <children>
+                                <Button fx:id="changePasswordButton" defaultButton="true" mnemonicParsing="false" onAction="#handleChangePassword" styleClass="primary-button" text="Change Password" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                                <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" styleClass="secondary-button" text="Back" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+            </padding>
+        </VBox>
+    </children>
+</VBox>
