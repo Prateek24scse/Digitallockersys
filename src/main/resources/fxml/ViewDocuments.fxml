@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digitallocker.controllers.ViewDocumentsController">
+   <center>
+      <VBox spacing="20.0" styleClass="main-content">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+               <children>
+                  <Label styleClass="page-title" text="My Documents" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" styleClass="secondary-button" text="Back to Dashboard" />
+               </children>
+            </HBox>
+            
+            <HBox spacing="15.0" styleClass="search-container">
+               <children>
+                  <TextField fx:id="searchField" promptText="Search documents..." styleClass="form-field" />
+                  <ComboBox fx:id="typeFilterCombo" promptText="Filter by type" styleClass="form-field" />
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#handleSearch" styleClass="primary-button" text="Search" />
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#handleClear" styleClass="secondary-button" text="Clear" />
+               </children>
+            </HBox>
+            
+            <TableView fx:id="documentsTable" styleClass="documents-table">
+               <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Document Name" />
+                  <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Type" />
+                  <TableColumn fx:id="issueDateColumn" prefWidth="120.0" text="Issue Date" />
+                  <TableColumn fx:id="uploadDateColumn" prefWidth="150.0" text="Upload Date" />
+                  <TableColumn fx:id="actionsColumn" prefWidth="200.0" text="Actions" />
+               </columns>
+            </TableView>
+            
+            <Label fx:id="statusLabel" styleClass="status-label" text="Status message" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

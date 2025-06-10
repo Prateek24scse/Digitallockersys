@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digitallocker.controllers.ImagePreviewController">
+   <children>
+      <VBox alignment="CENTER" spacing="15.0" styleClass="preview-container">
+         <children>
+            <Label styleClass="page-title" text="Document Preview" />
+            
+            <ScrollPane fitToWidth="true" fitToHeight="true" styleClass="image-scroll">
+               <content>
+                  <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true" />
+               </content>
+            </ScrollPane>
+            
+            <VBox spacing="5.0" styleClass="info-container">
+               <children>
+                  <Label fx:id="fileNameLabel" styleClass="info-label" text="File: " />
+                  <Label fx:id="fileTypeLabel" styleClass="info-label" text="Type: " />
+                  <Label fx:id="issueDateLabel" styleClass="info-label" text="Issue Date: " />
+                  <Label fx:id="uploadDateLabel" styleClass="info-label" text="Uploaded: " />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</VBox>
